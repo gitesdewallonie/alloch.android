@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Allo chambre d\'hôtes !</string>
+    <string name="action_settings">Credits</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="geolocation_me">Geolokaliseer mij</string>
+    <string name="search">Zoek</string>
+    <string name="address">Addres / Plaats</string>
+    <string name="you_much_enter_address">U moet een adres of een plaats invoeren</string>
+    <string name="opps">Fout !</string>
+    <string name="results">Resultaten</string>
+    <string name="grouped_rooms">Gegroepeerde gastenkamers</string>
+    <string name="no_result_found">Geen resultaat gevonden</string>
+    <string name="credit">Kredieten</string>
+    <string name="credit1">met de steun van het Commissariaat-generaal voor Toerisme van Wallonië</string>
+    <string name="credit2">Wallonie-Bruxelles tourisme</string>
+    <string name="credit3">Europees Landbouwfonds voor Plattelandsontwikkeling. Europa investeert in de plattelandsgebieden.</string>
+    <string name="details">Details</string>
+    <string name="no_phone_specified">Geen telefoonnummer voor dit logiesadres</string>
+    <string name="error">Error</string>
+    <string name="url_language">nl</string>
+    <string name="find_your_location">Locating</string>
+    <string name="loading">loading</string>
+    <string name="no_connection">Controleer eerst uw internetverbinding alvorens een zoekopdracht te doen</string>
+
+</resources>

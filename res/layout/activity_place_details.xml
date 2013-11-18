@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detailsscroller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#01DFD7"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <be.gitesdewallonie.allochambresdhotes.RealViewSwitcher
+                android:id="@+id/readview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </be.gitesdewallonie.allochambresdhotes.RealViewSwitcher>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/buttonsbg"
+            android:gravity="center_vertical"
+            android:padding="3dp" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/capacity" />
+
+                <ImageView
+                    android:id="@+id/img_logo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/capacitywhite" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_numberOfPeople"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="5/5"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img_logo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lit" />
+
+            <TextView
+                android:id="@+id/txt_NumberOfBed"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img_logo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lit1p" />
+
+            <TextView
+                android:id="@+id/txt_NumberOfSingleBed"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="30"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/bottoms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/lecoq" />
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/img_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/phonebtn" />
+
+                    <ImageView
+                        android:id="@+id/img_navigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/gpsbtn" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="TextView"
+                    android:textColor="@android:color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="TextView"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

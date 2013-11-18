@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Allo chambre d\'hôtes !</string>
+    <string name="action_settings">Credits</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="geolocation_me">Geolocate me</string>
+    <string name="search">Search</string>
+    <string name="address">Address / City</string>
+    <string name="you_much_enter_address">You much enter an address or a city</string>
+    <string name="opps">Opps !</string>
+    <string name="results">Results</string>
+    <string name="grouped_rooms">Grouped Rooms</string>
+    <string name="no_result_found">No result found</string>
+    <string name="credit">Credit</string>
+    <string name="credit1">with the support of the Commissariat général au Tourisme de Wallonie, the Tourist Board of Wallonia</string>
+    <string name="credit2">Wallonie-Bruxelles tourisme</string>
+    <string name="credit3">European Agricultural Fund for Rural Development.\nEurope invests in rural areas.</string>
+    <string name="details">Details</string>
+    <string name="no_phone_specified">No phone specified for this accommodation.</string>
+    <string name="error">Error</string>
+    <string name="url_language">en</string>
+    <string name="find_your_location">Locating</string>
+    <string name="loading">loading</string>
+    <string name="no_connection">Please check your Internet connection before searching</string>
+
+</resources>
