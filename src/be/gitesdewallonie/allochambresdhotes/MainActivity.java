@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
 	private KeyboardDetectorRelativeLayout rootLayout;
 	private ScrollView scroller;
 	Handler handler = new Handler();
+	Boolean gpschoicemade = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -192,8 +193,8 @@ public class MainActivity extends Activity {
 				String provider = Settings.Secure.getString(
 						getContentResolver(),
 						Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-				if (provider != null) {
-					if (!provider.contains("gps")) {
+
+				if (!gpschoicemade && provider != null && !provider.contains("gps")) {
 						// Notify users and show settings if they want to enable
 						// GPS
 						new AlertDialog.Builder(MainActivity.this)
@@ -206,6 +207,7 @@ public class MainActivity extends Activity {
 													int which) {
 												// TODO Auto-generated method
 												// stub
+												gpschoicemade = true;
 												Intent intent = new Intent(
 														Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 												startActivityForResult(intent,
@@ -218,11 +220,10 @@ public class MainActivity extends Activity {
 											public void onClick(
 													DialogInterface dialog,
 													int which) {
-
+												gpschoicemade = true;
 											}
 										}).show();
-						return;
-					}
+				    return;
 				}
 				if (!Lib.isConnected(MainActivity.this)) {
 					CheckInternetConnection();
