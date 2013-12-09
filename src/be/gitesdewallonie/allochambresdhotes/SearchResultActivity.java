@@ -302,6 +302,7 @@ public class SearchResultActivity extends FragmentActivity {
 
 							try{
                                 FrameLayout fl = (FrameLayout)findViewById(R.id.MapFramelayout);
+                                fl.setVisibility(View.VISIBLE);
                                 LayoutParams p1 = (LayoutParams) fl.getLayoutParams();
                                 int[] x = new int[2];
                                 fl.getLocationOnScreen(x);
