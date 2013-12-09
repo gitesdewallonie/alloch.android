@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -297,6 +298,21 @@ public class SearchResultActivity extends FragmentActivity {
 									.getDefaultDisplay();
 							int width = display.getWidth();
 							int height = display.getHeight();
+
+
+							try{
+                                FrameLayout fl = (FrameLayout)findViewById(R.id.MapFramelayout);
+                                LayoutParams p1 = (LayoutParams) fl.getLayoutParams();
+                                int[] x = new int[2];
+                                fl.getLocationOnScreen(x);
+                                p1.height = (int) (height - x[1] - dpToPx(52 * items.size()));
+                                fl.setLayoutParams(p1);
+							} catch(Exception ex)
+							{
+								Toast.makeText(getApplicationContext(), "" + ex.getMessage(),
+								               Toast.LENGTH_LONG).show();
+							}
+
 						}
 					});
 				} catch (Exception e) {
