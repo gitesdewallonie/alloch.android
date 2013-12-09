@@ -288,7 +288,7 @@ public class SearchResultActivity extends FragmentActivity {
 
 							if (items.size() > 0) {
 							    LatLngBounds bounds = builder.build();
-						        int padding = 50;
+						        int padding = 100;
 						        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
 						        GooglemapView.animateCamera(cu);
 							}
