@@ -33,9 +33,16 @@
 
         <uses-library android:name="com.google.android.maps" />
 
+        <!-- Debug -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA98lf-n60_VbLyoEN2V4D1CdPtTz86LY4" />
+            android:value="AIzaSyBfiGYB0ckvRXhS0Vj8ow5L5yCvhEdGpYI" />
+
+        <!-- Publish -->
+        <!-- <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBLKuZFWuyTEIyi8vX7raIAKBFq5Ffv6is" /> -->
+
         <meta-data
 	        android:name="com.google.android.gms.version"
 	        android:value="@integer/google_play_services_version" />
