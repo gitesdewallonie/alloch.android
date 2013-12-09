@@ -7,13 +7,16 @@
     android:orientation="vertical"
     tools:context=".SearchResultActivity" >
 
-    <com.google.android.maps.MapView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/mapview"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:apiKey="0nbRsC_ljHGPrcHfDp6rcYAEr_dBywv7ByCnMJQ"
-        android:clickable="true" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <fragment
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+    </FrameLayout>
 
     <ListView
         android:id="@+id/listView1"
