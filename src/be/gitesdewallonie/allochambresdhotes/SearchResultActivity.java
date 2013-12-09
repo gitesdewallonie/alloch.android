@@ -451,6 +451,7 @@ public class SearchResultActivity extends FragmentActivity {
             GooglemapView.getUiSettings().setZoomControlsEnabled(true);
             GooglemapView.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             GooglemapView.setMyLocationEnabled(true);
+            GooglemapView.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(50.854393, 4.369812), 7));
 
 
             GooglemapView.setInfoWindowAdapter(new InfoWindowAdapter() {
@@ -542,8 +543,13 @@ public class SearchResultActivity extends FragmentActivity {
 
 
 	    private void GetCurrentLocation() {
-
 	        double[] d = getlocation();
+	        if(d[0]==0 && d[1]==0)
+	        {
+                // Center on Belgium
+                d[0]=50.854393;
+                d[1]=4.369812;
+	        }
             GooglemapView.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(d[0], d[1]), 10));
 	        StartSearch(d[0]+","+ d[1]);
 	    }
