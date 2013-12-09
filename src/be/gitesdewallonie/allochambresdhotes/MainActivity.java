@@ -194,6 +194,11 @@ public class MainActivity extends Activity {
 						getContentResolver(),
 						Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
 
+				if (!Lib.isConnected(MainActivity.this)) {
+					CheckInternetConnection();
+					return;
+				}
+
 				if (!gpschoicemade && provider != null && !provider.contains("gps")) {
 						// Notify users and show settings if they want to enable
 						// GPS
@@ -221,13 +226,12 @@ public class MainActivity extends Activity {
 													DialogInterface dialog,
 													int which) {
 												gpschoicemade = true;
+                                                Intent intent = new Intent(MainActivity.this,
+                                                        SearchResultActivity.class);
+                                                startActivity(intent);
 											}
 										}).show();
 				    return;
-				}
-				if (!Lib.isConnected(MainActivity.this)) {
-					CheckInternetConnection();
-					return;
 				}
 				Intent intent = new Intent(MainActivity.this,
 						SearchResultActivity.class);
