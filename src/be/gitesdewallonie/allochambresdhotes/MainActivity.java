@@ -143,7 +143,7 @@ public class MainActivity extends Activity {
 		if (!Lib.isConnected(this)) {
 			new AlertDialog.Builder(MainActivity.this)
 					.setMessage(getString(R.string.no_connection))
-					.setPositiveButton("Exit",
+					.setPositiveButton(getResources().getString(R.string.exit),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,
@@ -151,7 +151,7 @@ public class MainActivity extends Activity {
 									finish();
 								}
 							})
-					.setNegativeButton("Try again",
+					.setNegativeButton(getResources().getString(R.string.try_again),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,
@@ -203,8 +203,8 @@ public class MainActivity extends Activity {
 						// Notify users and show settings if they want to enable
 						// GPS
 						new AlertDialog.Builder(MainActivity.this)
-								.setMessage("GPS is switched off. enable?")
-								.setPositiveButton("Enable GPS",
+								.setMessage(getResources().getString(R.string.gps_switched_off))
+								.setPositiveButton(getResources().getString(R.string.enable_gps),
 										new DialogInterface.OnClickListener() {
 
 											public void onClick(
@@ -219,7 +219,7 @@ public class MainActivity extends Activity {
 														5);
 											}
 										})
-								.setNegativeButton("Don't do it",
+								.setNegativeButton(getResources().getString(R.string.dont),
 										new DialogInterface.OnClickListener() {
 
 											public void onClick(

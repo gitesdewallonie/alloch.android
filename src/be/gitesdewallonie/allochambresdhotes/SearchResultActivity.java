@@ -86,7 +86,9 @@ public class SearchResultActivity extends FragmentActivity {
 	Boolean found = false;
 
 	private void initMyLocation() {
-		final ProgressDialog dialog = ProgressDialog.show(this,getString(R.string.find_your_location), "Please wait...");
+		final ProgressDialog dialog = ProgressDialog.show(this,
+		                                                  getString(R.string.find_your_location),
+		                                                  getResources().getString(R.string.please_wait));
 		GetCurrentLocation();
 		dialog.dismiss();
 		new Thread(new Runnable() {
@@ -123,7 +125,7 @@ public class SearchResultActivity extends FragmentActivity {
 		if (!Lib.isConnected(this)) {
 			new AlertDialog.Builder(SearchResultActivity.this)
 					.setMessage(getString(R.string.no_connection))
-					.setPositiveButton("Exit",
+					.setPositiveButton(getResources().getString(R.string.exit),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,
@@ -131,7 +133,7 @@ public class SearchResultActivity extends FragmentActivity {
 									finish();
 								}
 							})
-					.setNegativeButton("Try again",
+					.setNegativeButton(getResources().getString(R.string.try_again),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,
@@ -153,7 +155,7 @@ public class SearchResultActivity extends FragmentActivity {
 	 protected void onResume() {
 		 super.onResume();
 		 if (!checkPlayServices()) {
-             Toast.makeText(SearchResultActivity.this, "Update Google play service", Toast.LENGTH_LONG).show();
+             Toast.makeText(SearchResultActivity.this, getResources().getString(R.string.update_googleps), Toast.LENGTH_LONG).show();
 		 }
 	 }
 
@@ -185,7 +187,7 @@ public class SearchResultActivity extends FragmentActivity {
             if (GooglePlayServicesUtil.isUserRecoverableError(status)) {
             showErrorDialog(status);
             } else {
-            Toast.makeText(this, "This device is not supported.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getResources().getString(R.string.not_supported), Toast.LENGTH_LONG).show();
             finish();
             }
             return false;
@@ -205,7 +207,7 @@ public class SearchResultActivity extends FragmentActivity {
 			public void run() {
 				// TODO Auto-generated method stub
 				dialog = ProgressDialog.show(SearchResultActivity.this,
-						getString(R.string.loading), "Please wait...");
+						getString(R.string.loading), getResources().getString(R.string.please_wait));
 			}
 		});
 
@@ -580,7 +582,7 @@ public class SearchResultActivity extends FragmentActivity {
 		    switch (requestCode) {
 			    case REQUEST_CODE_RECOVER_PLAY_SERVICES:
 			    if (resultCode == RESULT_CANCELED) {
-			    Toast.makeText(this, "Google Play Services must be installed and up-to-date.",
+			    Toast.makeText(this, getResources().getString(R.string.googleps_installed),
 			    Toast.LENGTH_SHORT).show();
 			    finish();
 			    }

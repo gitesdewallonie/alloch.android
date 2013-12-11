@@ -134,9 +134,9 @@ public class PlaceDetailsActivity extends Activity {
 				AlertDialog alertDialog1 = new AlertDialog.Builder(
 						PlaceDetailsActivity.this).create();
 				if (PHONE != null) {
-					alertDialog1.setTitle("Call");
+					alertDialog1.setTitle(getResources().getString(R.string.call));
 					alertDialog1.setMessage("" + PHONE);
-					alertDialog1.setButton("Yes",
+					alertDialog1.setButton(getResources().getString(R.string.yes),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,
@@ -149,7 +149,7 @@ public class PlaceDetailsActivity extends Activity {
 									startActivity(callIntent);
 								}
 							});
-					alertDialog1.setButton2("No",
+					alertDialog1.setButton2(getResources().getString(R.string.no),
 							new DialogInterface.OnClickListener() {
 
 								public void onClick(DialogInterface dialog,

@@ -23,5 +23,17 @@
     <string name="find_your_location">Localisation</string>
     <string name="loading">Chargement</string>
     <string name="no_connection">Veuillez vérifier votre connexion à Internet avant de faire une recherche</string>
+    <string name="please_wait">Merci de patienter ...</string>
+    <string name="try_again">Essayer à nouveau</string>
+    <string name="call">Appeler</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="exit">Sortir</string>
+    <string name="gps_switched_off">La fonction GPS est désactivée. Activer ?</string>
+    <string name="enable_gps">Activer le GPS</string>
+    <string name="dont">Ne pas le faire</string>
+    <string name="googleps_installed">Google Play Services doit être installé et à jour.</string>
+    <string name="update_googleps">Mettre à jour Google play service.</string>
+    <string name="not_supported">Ce système n\'est pas supporté.</string>
 
 </resources>

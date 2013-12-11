@@ -23,5 +23,17 @@
     <string name="find_your_location">Locating</string>
     <string name="loading">loading</string>
     <string name="no_connection">Please check your Internet connection before searching</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="try_again">Try again</string>
+    <string name="call">Call</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="exit">Exit</string>
+    <string name="gps_switched_off">Sat nav is switched off. Enable?</string>
+    <string name="enable_gps">Enable sat nav</string>
+    <string name="dont">Do not enable</string>
+    <string name="googleps_installed">Google Play Services must be installed and up-to-date.</string>
+    <string name="update_googleps">Update Google play service.</string>
+    <string name="not_supported">This device is not supported.</string>
 
 </resources>

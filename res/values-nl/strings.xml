@@ -23,5 +23,17 @@
     <string name="find_your_location">Locating</string>
     <string name="loading">loading</string>
     <string name="no_connection">Controleer eerst uw internetverbinding alvorens een zoekopdracht te doen</string>
+    <string name="please_wait">Wachten ...</string>
+    <string name="try_again">Opnieuw</string>
+    <string name="call">Oproep</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="exit">Uit</string>
+    <string name="gps_switched_off">GPS is uitgeschakeld. Inschakelen ?</string>
+    <string name="enable_gps">GPS inschakelen</string>
+    <string name="dont">Doe dit niet</string>
+    <string name="googleps_installed">Google Play Services moet geïnstalleerd en up-to-date zijn.</string>
+    <string name="update_googleps">Update Google Play Services.</string>
+    <string name="not_supported">Dit toestel wordt niet ondersteund.</string>
 
 </resources>
