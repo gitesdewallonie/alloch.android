@@ -23,11 +23,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
-            <be.gitesdewallonie.allochambresdhotes.RealViewSwitcher
+            <be.gitesdewallonie.allochambredhotes.RealViewSwitcher
                 android:id="@+id/readview"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
-            </be.gitesdewallonie.allochambresdhotes.RealViewSwitcher>
+            </be.gitesdewallonie.allochambredhotes.RealViewSwitcher>
         </FrameLayout>
 
         <LinearLayout
