@@ -314,6 +314,9 @@ public class SearchResultActivity extends FragmentActivity {
                                 if (mapHeight > (0.75 * height)) {
                                     mapHeight = (int) Math.round(0.75 * height);
                                 }
+                                if (mapHeight < (0.5 * height)) {
+                                    mapHeight = (int) Math.round(0.5 * height);
+                                }
                                 p1.height = mapHeight;
                                 fl.setLayoutParams(p1);
                             } catch(Exception ex)

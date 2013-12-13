@@ -18,7 +18,7 @@
     </style>
 
     <style name="Credits">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">15dp</item>
         <item name="android:paddingTop">0sp</item>
         <item name="android:paddingBottom">30sp</item>
     </style>
