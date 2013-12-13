@@ -73,6 +73,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/creditbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bar"
@@ -100,49 +101,49 @@
                 <ImageView
                     android:id="@+id/img_logo1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingTop="10dp"
+                    android:paddingTop="20sp"
                     android:src="@drawable/logo1" />
 
                 <TextView
+                    style="@style/Credits"
                     android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="10dp"
                     android:text="@string/credit1"
                     android:textColor="@android:color/white" />
 
                 <ImageView
                     android:id="@+id/img_logo2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/logo2" />
 
                 <TextView
+                    style="@style/Credits"
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="10dp"
                     android:text="@string/credit2"
                     android:textColor="@android:color/white" />
 
                 <ImageView
                     android:id="@+id/img_logo3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/logo3" />
 
                 <TextView
+                    style="@style/Credits"
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="10dp"
                     android:text="@string/credit3"
                     android:textColor="@android:color/white" />
             </LinearLayout>

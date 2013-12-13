@@ -121,17 +121,15 @@ public class MainActivity extends Activity {
 						int height = display.getHeight();
 						View v1 = findViewById(R.id.layout1);
 						View v2 = findViewById(R.id.layout2);
-						LinearLayout.LayoutParams p1 = (LayoutParams) v1
-								.getLayoutParams();
+						LinearLayout.LayoutParams p1 = (LayoutParams) v1.getLayoutParams();
 						int[] x = new int[2];
+                        View cred = findViewById(R.id.creditbar);
+                        LinearLayout.LayoutParams creditbar = (LayoutParams) cred.getLayoutParams();
 						v1.getLocationOnScreen(x);
-						p1.height = (int) (height - x[1] - scroller
-								.getScrollY());
+                        p1.height = (int) (height - x[1] - scroller.getScrollY() - cred.getHeight());
 						v1.setLayoutParams(p1);
-						LinearLayout.LayoutParams p2 = (LayoutParams) v2
-								.getLayoutParams();
-						p2.height = p1.height;
-						v2.setLayoutParams(p2);
+                        LinearLayout.LayoutParams p2 = (LayoutParams) v2.getLayoutParams();
+                        v2.setLayoutParams(p2);
 					}
 				});
 			}
@@ -175,11 +173,12 @@ public class MainActivity extends Activity {
 		LinearLayout.LayoutParams p1 = (LayoutParams) v1.getLayoutParams();
 		int[] x = new int[2];
 		v1.getLocationOnScreen(x);
-		p1.height = (int) (height - x[1] - scroller.getScrollY());
+        View cred = findViewById(R.id.creditbar);
+        LinearLayout.LayoutParams creditbar = (LayoutParams) cred.getLayoutParams();
+        p1.height = (int) (height - x[1] - scroller.getScrollY() - cred.getHeight());
 		v1.setLayoutParams(p1);
-		LinearLayout.LayoutParams p2 = (LayoutParams) v2.getLayoutParams();
-		p2.height = p1.height;
-		v2.setLayoutParams(p2);
+        LinearLayout.LayoutParams p2 = (LayoutParams) v2.getLayoutParams();
+        v2.setLayoutParams(p2);
 		Button btn1 = (Button) findViewById(R.id.button1);
 		final Button btn2 = (Button) findViewById(R.id.button2);
 		Button btn3 = (Button) findViewById(R.id.button3);

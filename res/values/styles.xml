@@ -17,4 +17,10 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="Credits">
+        <item name="android:textSize">30sp</item>
+        <item name="android:paddingTop">0sp</item>
+        <item name="android:paddingBottom">30sp</item>
+    </style>
+
 </resources>
