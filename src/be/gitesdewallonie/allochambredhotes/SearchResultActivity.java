@@ -292,8 +292,10 @@ public class SearchResultActivity extends FragmentActivity {
 							if (items.size() > 0) {
 							    LatLngBounds bounds = builder.build();
 						        int padding = 100;
-						        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
-						        GooglemapView.animateCamera(cu);
+							    try{
+                                    CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+                                    GooglemapView.animateCamera(cu);
+                                } catch(Exception ex) {}
 							}
 
 							Display display = getWindowManager()
@@ -302,19 +304,23 @@ public class SearchResultActivity extends FragmentActivity {
 							int height = display.getHeight();
 
 
-							try{
+                            try{
                                 FrameLayout fl = (FrameLayout)findViewById(R.id.MapFramelayout);
                                 fl.setVisibility(View.VISIBLE);
                                 LayoutParams p1 = (LayoutParams) fl.getLayoutParams();
                                 int[] x = new int[2];
                                 fl.getLocationOnScreen(x);
-                                p1.height = (int) (height - x[1] - dpToPx(52 * items.size()));
+                                int mapHeight = (int) (height - x[1] - dpToPx(52 * (items.size()+1)));
+                                if (mapHeight > (0.75 * height)) {
+                                    mapHeight = (int) Math.round(0.75 * height);
+                                }
+                                p1.height = mapHeight;
                                 fl.setLayoutParams(p1);
-							} catch(Exception ex)
-							{
-								Toast.makeText(getApplicationContext(), "" + ex.getMessage(),
-								               Toast.LENGTH_LONG).show();
-							}
+                            } catch(Exception ex)
+                            {
+                             Toast.makeText(getApplicationContext(), "" + ex.getMessage(),
+                                            Toast.LENGTH_LONG).show();
+                            }
 
 						}
 					});
@@ -553,7 +559,9 @@ public class SearchResultActivity extends FragmentActivity {
                 d[0]=50.854393;
                 d[1]=4.369812;
 	        }
-            GooglemapView.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(d[0], d[1]), 10));
+		    try{
+                GooglemapView.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(d[0], d[1]), 10));
+			} catch(Exception ex) {}
 	        StartSearch(d[0]+","+ d[1]);
 	    }
 
