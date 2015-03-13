@@ -76,9 +76,15 @@ public class GroupedActivity extends Activity {
 					intent.putExtra("place", item);
 					intent.putExtra("location", location);
 					startActivity(intent);
+					overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 				}
 			});
 			return row;
 		}
+	}
+	@Override
+	public void onBackPressed() {
+	    super.onBackPressed();
+	    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);   
 	}
 }

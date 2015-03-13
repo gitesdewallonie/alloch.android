@@ -417,6 +417,7 @@ public class SearchResultActivity extends FragmentActivity {
 						intent.putExtra("place", place);
 						intent.putExtra("location", location);
 						startActivity(intent);
+						SearchResultActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 					}
 				});
 			}
@@ -437,6 +438,7 @@ public class SearchResultActivity extends FragmentActivity {
 						intent.putExtra("places", places);
 						intent.putExtra("location", location);
 						startActivity(intent);
+						SearchResultActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 					}
 				});
 			}
@@ -533,6 +535,7 @@ public class SearchResultActivity extends FragmentActivity {
                             intent.putExtra("place", place);
                             intent.putExtra("location", location);
                             startActivity(intent);
+                            SearchResultActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                         }
                         if (item.isJsonArray()) {
                             final Place[] places = gson.fromJson(item, Place[].class);
@@ -541,6 +544,7 @@ public class SearchResultActivity extends FragmentActivity {
                             intent.putExtra("places", places);
                             intent.putExtra("location", location);
                             startActivity(intent);
+                            SearchResultActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                         }
                     }
                     catch(Exception ex)
@@ -602,4 +606,9 @@ public class SearchResultActivity extends FragmentActivity {
 		    }
 		    super.onActivityResult(requestCode, resultCode, data);
 	    }
+	    @Override
+		public void onBackPressed() {
+		    super.onBackPressed();
+		    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);   
+		}
 }

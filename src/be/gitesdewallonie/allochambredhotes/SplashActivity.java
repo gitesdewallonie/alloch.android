@@ -35,6 +35,7 @@ public class SplashActivity extends Activity {
 						Intent intent = new Intent(SplashActivity.this,
 								MainActivity.class);
 						startActivity(intent);
+						SplashActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 						Timer timer = new Timer();
 						timer.schedule(new TimerTask() {
 							@Override

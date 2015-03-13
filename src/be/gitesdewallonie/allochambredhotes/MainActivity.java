@@ -77,6 +77,7 @@ public class MainActivity extends Activity {
 				Intent i = new Intent(Intent.ACTION_VIEW);
 				i.setData(Uri.parse(url));
 				startActivity(i);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 		logo2.setOnClickListener(new OnClickListener() {
@@ -87,6 +88,7 @@ public class MainActivity extends Activity {
 				Intent i = new Intent(Intent.ACTION_VIEW);
 				i.setData(Uri.parse(url));
 				startActivity(i);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 		logo3.setOnClickListener(new OnClickListener() {
@@ -97,6 +99,7 @@ public class MainActivity extends Activity {
 				Intent i = new Intent(Intent.ACTION_VIEW);
 				i.setData(Uri.parse(url));
 				startActivity(i);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 		new Thread(new Runnable() {
@@ -228,6 +231,7 @@ public class MainActivity extends Activity {
                                                 Intent intent = new Intent(MainActivity.this,
                                                         SearchResultActivity.class);
                                                 startActivity(intent);
+                                                MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 											}
 										}).show();
 				    return;
@@ -235,6 +239,7 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(MainActivity.this,
 						SearchResultActivity.class);
 				startActivity(intent);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 		btn2.setOnClickListener(new OnClickListener() {
@@ -271,6 +276,7 @@ public class MainActivity extends Activity {
 						SearchResultActivity.class);
 				intent.putExtra("key", key);
 				startActivity(intent);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		}); 
 		edit.setOnEditorActionListener(new OnEditorActionListener() {
@@ -295,6 +301,7 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(MainActivity.this,
 						CreditActivity.class);
 				startActivity(intent);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 
@@ -319,6 +326,7 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(MainActivity.this,
 						CreditActivity.class);
 				startActivity(intent);
+				MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
 	}
@@ -330,6 +338,7 @@ public class MainActivity extends Activity {
 		case R.id.action_settings:
 			Intent intent = new Intent(MainActivity.this, CreditActivity.class);
 			startActivity(intent);
+			MainActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

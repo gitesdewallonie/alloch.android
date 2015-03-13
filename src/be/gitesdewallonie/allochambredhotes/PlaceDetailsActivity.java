@@ -185,7 +185,13 @@ public class PlaceDetailsActivity extends Activity {
 						+ "," + place.latitude;
 				startActivity(new Intent(android.content.Intent.ACTION_DEFAULT,
 						Uri.parse(uri)));
+				PlaceDetailsActivity.this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 			}
 		});
+	}
+	@Override
+	public void onBackPressed() {
+	    super.onBackPressed();
+	    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);   
 	}
 }
